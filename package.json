@@ -21,6 +21,7 @@
     "concurrently": "2.0.0",
     "express": "4.13.3",
     "extract-text-webpack-plugin": "0.9.1",
+    "immutable-assign": "^1.0.29",
     "lodash": "4.0.0",
     "react": "0.14.7",
     "react-dom": "0.14.7",

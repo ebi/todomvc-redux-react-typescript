@@ -1,6 +1,7 @@
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import * as React from 'react';
+import Example from "../../todos/components/Example";
 
 import {
   Header,
@@ -26,6 +27,7 @@ class App extends React.Component<AppProps, void> {
     return (
       <div className="todoapp">
         <Header addTodo={(text: string) => dispatch(addTodo(text))} />
+        <Example title="foo" />
         <MainSection
             todos={todos}
             editTodo={(t,s) => dispatch(editTodo(t, s))}
@@ -39,7 +41,7 @@ class App extends React.Component<AppProps, void> {
 }
 
 const mapStateToProps = state => ({
-  todos: state.todos
+  todos: state.todos.todos
 });
 
 export default connect(mapStateToProps)(App);
